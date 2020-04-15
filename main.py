@@ -11,12 +11,14 @@ from ulauncher.api.shared.action.HideWindowAction import HideWindowAction
 
 logger = logging.getLogger(__name__)
 
+
 class EnpassExtension(Extension):
 
     def __init__(self):
         logger.info('init Enpass extension')
-        super(EncodeExtension, self).__init__()
+        super(EnpassExtension, self).__init__()
         self.subscribe(KeywordQueryEvent, KeywordQueryEventListener())
+
 
 class KeywordQueryEventListener(EventListener):
 
@@ -31,20 +33,21 @@ class KeywordQueryEventListener(EventListener):
         php_bycrypt = os.popen("php -r 'echo password_hash(%s, PASSWORD_BCRYPT);'" % rawstr).read()
 
         items.append(ExtensionResultItem(icon='images/icon.png',
-                                         name=base64Text,
+                                         name=php_password_default,
                                          description='PHP PASSWORD_DEFAULT',
                                          highlightable=False,
-                                         on_enter=CopyToClipboardAction(base64Text)
+                                         on_enter=CopyToClipboardAction(php_password_default)
                                          ))
 
         items.append(ExtensionResultItem(icon='images/icon.png',
-                                         name=urlEncoded,
+                                         name=php_bycrypt,
                                          description='PHP BYCRYPT',
                                          highlightable=False,
-                                         on_enter=CopyToClipboardAction(urlEncoded)
-                                        ))
+                                         on_enter=CopyToClipboardAction(php_bycrypt)
+                                         ))
 
         return RenderResultListAction(items)
+
 
 if __name__ == '__main__':
     EnpassExtension().run()
