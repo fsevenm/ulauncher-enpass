@@ -1,0 +1,18 @@
+{
+    "required_api_version": "^1.0.0",
+    "name": "Enpass",
+    "description": "Encrypt text to hashed password",
+    "developer_name": "Ayub Aswad",
+    "icon": "images/icon.png",
+    "options": {
+        "query_debounce": 0.05
+    },
+    "preferences": [
+        {
+            "id": "enpass_kw",
+            "type": "keyword",
+            "name": "Enpass",
+            "default_value": "enpass"
+        }
+    ]
+}
