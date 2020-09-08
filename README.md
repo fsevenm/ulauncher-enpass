@@ -1,14 +1,15 @@
 # Ulaucher Enpass
 
-> [ulauncher](https://ulauncher.io/) Extension for encrypting string to hashed password (PHP PASSWORD_DEFAULT, PHP PASSWORD_BYCRYPT)
+> [ulauncher](https://ulauncher.io/) Extension for hashing string to PHP hashed password (PHP PASSWORD_DEFAULT, PHP PASSWORD_BYCRYPT)
 
 ## Screenshots
-![media1](screenshot_1.png)
+![media1](preview.gif)
 
 ## Requirements
 
 * [ulauncher](https://ulauncher.io/)
 * Python >= 2.7
+* PHP
 
 ## Install
 
