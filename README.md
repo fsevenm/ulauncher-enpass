@@ -21,7 +21,7 @@ Open ulauncher preferences window -> extensions -> add extension and paste the f
 ## Development
 
 ```
-git clone https://github.com/fsevenm/ulauncher-enpass
+git clone git@github.com:fsevenm/ulauncher-enpass.git
 cd ~/.cache/ulauncher_cache/extensions/ulauncher-enpass
 ln -s <repo_location> ulauncher-enpass
 ```
