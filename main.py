@@ -29,8 +29,8 @@ class KeywordQueryEventListener(EventListener):
         if rawstr is None:
             rawstr = ""
 
-        php_password_default = os.popen("php -r 'echo password_hash(%s, PASSWORD_DEFAULT);'" % rawstr).read()
-        php_bycrypt = os.popen("php -r 'echo password_hash(%s, PASSWORD_BCRYPT);'" % rawstr).read()
+        php_password_default = os.popen("php -r 'echo password_hash(\"%s\", PASSWORD_DEFAULT);'" % rawstr).read()
+        php_bycrypt = os.popen("php -r 'echo password_hash(\"%s\", PASSWORD_BCRYPT);'" % rawstr).read()
 
         items.append(ExtensionResultItem(icon='images/icon.png',
                                          name=php_password_default,
